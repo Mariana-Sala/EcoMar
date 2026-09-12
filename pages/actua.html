@@ -1,57 +1,217 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EcoMar-Actúa</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <img src="../assets/img/Logo.jpeg" alt="EcoMar">
-        <nav class="nav-principal" id="nav-principal">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../pages/el-oceano.html">El Océano</a></li>
-                <li><a href="../pages/vida-marina.html">Vida Marina</a></li>
-                <li><a href="../pages/amenazas.html">Amenazas</a></li>
-                <li><a href="../pages/actua.html">Actúa</a></li>
-                <li><a href="../pages/asistente.html">Asistente</a></li>
-            </ul>
-        </nav>
+      <img src="../assets/img/Logo.jpeg" alt="EcoMar" />
+      <nav class="nav-principal" id="nav-principal">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../pages/el-oceano.html">El Océano</a></li>
+          <li><a href="../pages/vida-marina.html">Vida Marina</a></li>
+          <li><a href="../pages/amenazas.html">Amenazas</a></li>
+          <li><a href="../pages/actua.html">Actúa</a></li>
+          <li><a href="../pages/asistente.html">Asistente</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
+      <section>
+        <h1>TU ACCIÓN TAMBIÉN LLEGA AL MAR</h1>
+        <p>Pequeños cambios pueden generar grandes impactos.</p>
 
+        <h2>¿Qué tan consiente eres del impacto que generas en el océano?</h2>
+
+        <figure>
+          <img
+            src="../assets/img/actua_oceano.jpeg"
+            alt="Ecosistema marino del caribe colombiano"
+          />
+        </figure>
+
+        <p>
+          Responde este breve cuestionario y descubre cómo puedes aportar a un
+          caribe más limpio y sostenible
+        </p>
+      </section>
+
+      <section>
+        <form>
+          <progress value="1" max="5">1 de 5</progress>
+
+          <fieldset>
+            <legend>
+              1. ¿Cuál de estas acciones ayuda más a reducir la contaminación
+              por plásticos en el mar?
+            </legend>
+
+            <label>
+              <input type="radio" name="pregunta1" value="reutilizables" />
+              Usar botellas y bolsas reutilizables
+            </label>
+
+            <label>
+              <input type="radio" name="pregunta1" value="tirar-residuos" />
+              Tirar residuos en la playa (si están lejos del mar)
+            </label>
+
+            <label>
+              <input type="radio" name="pregunta1" value="productos" />
+              Comprar productos con mucho enfoque
+            </label>
+
+            <label>
+              <input type="radio" name="pregunta1" value="plastico" />
+              Usar plásticos de un solo uso
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              2. ¿Qué puedes hacer para cuidar el agua en tu día a día?
+            </legend>
+
+            <label>
+              <input type="radio" name="pregunta2" value="ahorrar" />
+              Ahorrar agua en las actividades diarias
+            </label>
+
+            <label>
+              <input type="radio" name="pregunta2" value="desperdiciar" />
+              Dejar el agua corriendo
+            </label>
+
+            <label>
+              <input type="radio" name="pregunta2" value="contaminar" />
+              Arrojar residuos al agua
+            </label>
+
+            <label>
+              <input type="radio" name="pregunta2" value="ninguna" />
+              No realizar ninguna acción
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              3. ¿Qué opción ayuda a enfrentar el cambio climático?
+            </legend>
+
+            <label>
+              <input type="radio" name="pregunta3" value="reciclar" />
+              Reciclar y reducir el consumo de recursos
+            </label>
+
+            <label>
+              <input type="radio" name="pregunta3" value="residuos" />
+              Aumentar la cantidad de residuos
+            </label>
+
+            <label>
+              <input type="radio" name="pregunta3" value="contaminar" />
+              Generar más contaminación
+            </label>
+
+            <label>
+              <input type="radio" name="pregunta3" value="ninguna" />
+              No realizar ninguna acción
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              4. Si visitas una playa, ¿cómo actúas frente a los animales y
+              ecosistemas marinos?
+            </legend>
+
+            <label>
+              <input type="radio" name="pregunta4" value="respetar" />
+              Respetar los animales y no alterar su hábitat
+            </label>
+
+            <label>
+              <input type="radio" name="pregunta4" value="alimentar" />
+              Alimentar a los animales
+            </label>
+
+            <label>
+              <input type="radio" name="pregunta4" value="residuos" />
+              Dejar residuos en la playa
+            </label>
+
+            <label>
+              <input type="radio" name="pregunta4" value="extraer" />
+              Extraer elementos del ecosistema
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              5. ¿Qué acción estarías dispuesto(a) a realizar para ayudar al
+              océano?
+            </legend>
+
+            <label>
+              <input type="radio" name="pregunta5" value="reducir-plastico" />
+              Reducir el uso de plásticos
+            </label>
+
+            <label>
+              <input type="radio" name="pregunta5" value="limpiar" />
+              Participar en jornadas de limpieza
+            </label>
+
+            <label>
+              <input type="radio" name="pregunta5" value="educar" />
+              Compartir información sobre el cuidado del océano
+            </label>
+
+            <label>
+              <input type="radio" name="pregunta5" value="todas" />
+              Realizar todas las anteriores
+            </label>
+          </fieldset>
+        </form>
+      </section>
     </main>
-    
+
     <footer>
-        <div class="pie-marca">
-            <h4>EcoMar</h4>
-            <p>Proyecto educativo para informar, educar y activar acciones a favor del mar Caribe colombiano, alineado con el ODS 14 (Vida submarina) y el ODS 13 (Acción por el clima).</p>
-        </div>
-        <div>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../pages/el-oceano.html">El Océano</a></li>
-                <li><a href="../pages/vida-marina.html">Vida Marina</a></li>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <li><a href="../pages/amenazas.html">Amenazas</a></li>
-                <li><a href="../pages/actua.html">Actúa</a></li>
-                <li><a href="../pages/asistente.html">Asistente</a></li>
-            </ul>
-        </div>
-        <div>
-            <h4>Contáctanos</h4>
-            <p>mariana.toro-s@uniminuto.edu.co</p>
-            <p>scharyk.garcia@uniminuto.edu.co</p>
-        </div>
-        <div class="pie-inferior">
-            <span>© 2026 EcoMar — Proyecto académico, ODS 14 y ODS 13.</span>
-            <span>Hecho con HTML, CSS y JavaScript nativos.</span>
-        </div>  
+      <div class="pie-marca">
+        <h4>EcoMar</h4>
+        <p>
+          Proyecto educativo para informar, educar y activar acciones a favor
+          del mar Caribe colombiano, alineado con el ODS 14 (Vida submarina) y
+          el ODS 13 (Acción por el clima).
+        </p>
+      </div>
+      <div>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../pages/el-oceano.html">El Océano</a></li>
+          <li><a href="../pages/vida-marina.html">Vida Marina</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li><a href="../pages/amenazas.html">Amenazas</a></li>
+          <li><a href="../pages/actua.html">Actúa</a></li>
+          <li><a href="../pages/asistente.html">Asistente</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contáctanos</h4>
+        <p>mariana.toro-s@uniminuto.edu.co</p>
+        <p>scharyk.garcia@uniminuto.edu.co</p>
+      </div>
+      <div class="pie-inferior">
+        <span>© 2026 EcoMar — Proyecto académico, ODS 14 y ODS 13.</span>
+        <span>Hecho con HTML, CSS y JavaScript nativos.</span>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
