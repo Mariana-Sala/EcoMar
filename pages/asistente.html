@@ -1,12 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Habla con Náyade, el asistente de EcoMar: pregunta sobre corales, plásticos, pesca sostenible o pide un plan de acción."
+    />
+    <title>Asistente | EcoMar</title>
+    <link rel="icon" href="../assets/img/Logo.jpeg" type="image/jpeg">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
-    <title>EcoMar-Asistente</title>
+    <link rel="stylesheet" href="../css/asistente.css">
   </head>
+ 
   <body>
     <header class="header-principal">
         <div class="logo-container">
@@ -19,62 +26,58 @@
                 <li><a href="vida-marina.html">Vida Marina</a></li>
                 <li><a href="amenazas.html">Amenazas</a></li>
                 <li><a href="actua.html">Actúa</a></li>
-                <li><a href="asistente.html">Asistente</a></li>
+                <li><a href="asistente.html" aria-current="page">Asistente</a></li>
             </ul>
         </nav>
     </header>
-
-    <main>
-      <section>
-        <h1>Habla con Náyade, tu asistente de EcoMar</h1>
-        <p>
-          Pregunta sobre corales, plásticos, pesca sostenible o pide un plan de
-          acción según tu municipio.
-        </p>
-
-        <figure>
-          <img
-            src="../assets/img/asistente_fondo.jpeg"
-            alt="Costa del Caribe colombiano al atardecer"
-          />
-        </figure>
-      </section>
-
-      <section>
-        <h2>Asistente Náyade</h2>
-
-        <section>
-          <article>
-            <p>
-              ¡Hola! Soy el asistente de EcoMar. Puedo orientarte sobre corales,
-              plásticos, pesca sostenible o ayudarte a armar un plan de acción.
-              ¿En qué te ayudo?
-            </p>
-          </article>
-        </section>
-
-        <form>
-          <label id="pregunta-usuario"
-            >Escribe tu pregunta sobre el mar Caribe</label
-          >
+ 
+    <!-- La imagen de la costa va de fondo del <main> en el CSS (asistente_fondo.jpeg) -->
+    <main class="asistente">
+      <nav class="migas" aria-label="Migas de pan">
+        <ol>
+          <li><a href="../index.html">Inicio</a></li>
+          <li aria-current="page">Asistente</li>
+        </ol>
+      </nav>
+ 
+      <h1 class="asistente-titulo">Habla con Náyade, tu asistente de EcoMar</h1>
+      <p class="asistente-subtitulo">
+        Pregunta sobre corales, plásticos, pesca sostenible o pide un plan de
+        acción según tu municipio.
+      </p>
+ 
+      <section class="chat">
+        <h2 class="chat-titulo">Asistente Náyade</h2>
+ 
+        <div class="chat-mensajes" role="log">
+          <p class="mensaje">
+            ¡Hola! Soy el asistente de EcoMar. Puedo orientarte sobre corales,
+            plásticos, pesca sostenible o ayudarte a armar un plan de acción.
+            ¿En qué te ayudo?
+          </p>
+        </div>
+ 
+        <form class="chat-formulario">
           <input
+            class="chat-input"
             type="text"
-            id="pregunta-usuario"
-            name="pregunta-usuario"
+            name="pregunta"
             placeholder="Escribe tu pregunta sobre el mar Caribe..."
+            aria-label="Escribe tu pregunta sobre el mar Caribe"
+            required
           />
-          <button>Enviar</button>
+          <button class="chat-boton" type="submit">Enviar</button>
         </form>
       </section>
     </main>
-
+ 
     <footer class="footer-ecomar">
         <div class="footer-content">
             <div class="footer-logo">
                 <img class="logo" src="../assets/img/Logo.jpeg" alt="EcoMar">
                 <p>Proyecto educativo para informar, educar y activar acciones a favor del mar Caribe colombiano, alineado con el ODS 14 (Vida submarina) y el ODS 13 (Acción por el clima).</p>
             </div>
-            
+ 
             <nav class="footer-nav">
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
@@ -87,7 +90,7 @@
                     <li><a href="asistente.html">Asistente</a></li>
                 </ul>
             </nav>
-
+ 
             <div class="footer-contacto">
                 <h4>Contáctanos</h4>
                 <p>mariana.toro-s@uniminuto.edu.co</p>
@@ -97,7 +100,7 @@
         <div class="footer-bottom">
             <p>&copy;2026 EcoMar — Proyecto académico, ODS 14 y ODS 13.</p>
             <p>Hecho con HTML, CSS y JavaScript nativos.</p>
-        </div>  
+        </div>
     </footer>
   </body>
 </html>

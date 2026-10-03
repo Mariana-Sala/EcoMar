@@ -3,10 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Responde el cuestionario de EcoMar y descubre cómo aportar a un Caribe más limpio y sostenible."
+    />
+    <title>Actúa | EcoMar</title>
+    <link rel="icon" href="../assets/img/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
-    <title>EcoMar-Actúa</title>
+    <link rel="stylesheet" href="../css/actua.css">
   </head>
+ 
   <body>
     <header class="header-principal">
         <div class="logo-container">
@@ -18,179 +25,181 @@
                 <li><a href="el-oceano.html">El Océano</a></li>
                 <li><a href="vida-marina.html">Vida Marina</a></li>
                 <li><a href="amenazas.html">Amenazas</a></li>
-                <li><a href="actua.html">Actúa</a></li>
+                <li><a href="actua.html" aria-current="page">Actúa</a></li>
                 <li><a href="asistente.html">Asistente</a></li>
             </ul>
         </nav>
     </header>
-
-    <main>
-      <section>
-        <h1>TU ACCIÓN TAMBIÉN LLEGA AL MAR</h1>
-        <p>Pequeños cambios pueden generar grandes impactos.</p>
-
-        <h2>¿Qué tan consiente eres del impacto que generas en el océano?</h2>
-
-        <figure>
-          <img
-            src="../assets/img/actua_oceano.jpeg"
-            alt="Ecosistema marino del caribe colombiano"
-          />
-        </figure>
-
-        <p>
+ 
+    <main class="actua">
+      <nav class="migas" aria-label="Migas de pan">
+        <ol>
+          <li><a href="../index.html">Inicio</a></li>
+          <li aria-current="page">Actúa</li>
+        </ol>
+      </nav>
+ 
+      <h1 class="actua-titulo">Tu acción también llega al mar</h1>
+      <p class="actua-subtitulo">Pequeños cambios pueden generar grandes impactos</p>
+ 
+      <h2 class="actua-pregunta">¿Qué tan consciente eres del impacto que generas en el océano?</h2>
+ 
+      <!-- La imagen de corales va de fondo en el CSS (actua_oceano.jpeg) -->
+      <section class="cuestionario">
+        <p class="cuestionario-intro">
           Responde este breve cuestionario y descubre cómo puedes aportar a un
-          caribe más limpio y sostenible
+          Caribe más limpio y sostenible
         </p>
-      </section>
-
-      <section>
-        <form>
-          <progress value="1" max="5">1 de 5</progress>
-
-          <fieldset>
-            <legend>
+ 
+        <form class="cuestionario-form">
+          <progress class="cuestionario-progreso" value="1" max="5">1 de 5</progress>
+          <p class="cuestionario-contador">1/5</p>
+ 
+          <fieldset class="pregunta">
+            <legend class="pregunta-enunciado">
               1. ¿Cuál de estas acciones ayuda más a reducir la contaminación
               por plásticos en el mar?
             </legend>
-
-            <label>
-              <input type="radio" name="pregunta1" value="reutilizables" />
+ 
+            <label class="opcion">
+              <input class="opcion-radio" type="radio" name="pregunta1" value="reutilizables" required />
               Usar botellas y bolsas reutilizables
             </label>
-
-            <label>
-              <input type="radio" name="pregunta1" value="tirar-residuos" />
-              Tirar residuos en la playa (si están lejos del mar)
+ 
+            <label class="opcion">
+              <input class="opcion-radio" type="radio" name="pregunta1" value="tirar-residuos" />
+              Tirar residuos en la playa (si estás lejos del mar)
             </label>
-
-            <label>
-              <input type="radio" name="pregunta1" value="productos" />
-              Comprar productos con mucho enfoque
+ 
+            <label class="opcion">
+              <input class="opcion-radio" type="radio" name="pregunta1" value="productos" />
+              Comprar productos con mucho empaque
             </label>
-
-            <label>
-              <input type="radio" name="pregunta1" value="plastico" />
+ 
+            <label class="opcion">
+              <input class="opcion-radio" type="radio" name="pregunta1" value="plastico" />
               Usar plásticos de un solo uso
             </label>
           </fieldset>
-
-          <fieldset>
-            <legend>
+ 
+          <fieldset class="pregunta">
+            <legend class="pregunta-enunciado">
               2. ¿Qué puedes hacer para cuidar el agua en tu día a día?
             </legend>
-
-            <label>
-              <input type="radio" name="pregunta2" value="ahorrar" />
+ 
+            <label class="opcion">
+              <input class="opcion-radio" type="radio" name="pregunta2" value="ahorrar" required />
               Ahorrar agua en las actividades diarias
             </label>
-
-            <label>
-              <input type="radio" name="pregunta2" value="desperdiciar" />
+ 
+            <label class="opcion">
+              <input class="opcion-radio" type="radio" name="pregunta2" value="desperdiciar" />
               Dejar el agua corriendo
             </label>
-
-            <label>
-              <input type="radio" name="pregunta2" value="contaminar" />
+ 
+            <label class="opcion">
+              <input class="opcion-radio" type="radio" name="pregunta2" value="contaminar" />
               Arrojar residuos al agua
             </label>
-
-            <label>
-              <input type="radio" name="pregunta2" value="ninguna" />
+ 
+            <label class="opcion">
+              <input class="opcion-radio" type="radio" name="pregunta2" value="ninguna" />
               No realizar ninguna acción
             </label>
           </fieldset>
-
-          <fieldset>
-            <legend>
+ 
+          <fieldset class="pregunta">
+            <legend class="pregunta-enunciado">
               3. ¿Qué opción ayuda a enfrentar el cambio climático?
             </legend>
-
-            <label>
-              <input type="radio" name="pregunta3" value="reciclar" />
+ 
+            <label class="opcion">
+              <input class="opcion-radio" type="radio" name="pregunta3" value="reciclar" required />
               Reciclar y reducir el consumo de recursos
             </label>
-
-            <label>
-              <input type="radio" name="pregunta3" value="residuos" />
+ 
+            <label class="opcion">
+              <input class="opcion-radio" type="radio" name="pregunta3" value="residuos" />
               Aumentar la cantidad de residuos
             </label>
-
-            <label>
-              <input type="radio" name="pregunta3" value="contaminar" />
+ 
+            <label class="opcion">
+              <input class="opcion-radio" type="radio" name="pregunta3" value="contaminar" />
               Generar más contaminación
             </label>
-
-            <label>
-              <input type="radio" name="pregunta3" value="ninguna" />
+ 
+            <label class="opcion">
+              <input class="opcion-radio" type="radio" name="pregunta3" value="ninguna" />
               No realizar ninguna acción
             </label>
           </fieldset>
-
-          <fieldset>
-            <legend>
+ 
+          <fieldset class="pregunta">
+            <legend class="pregunta-enunciado">
               4. Si visitas una playa, ¿cómo actúas frente a los animales y
               ecosistemas marinos?
             </legend>
-
-            <label>
-              <input type="radio" name="pregunta4" value="respetar" />
+ 
+            <label class="opcion">
+              <input class="opcion-radio" type="radio" name="pregunta4" value="respetar" required />
               Respetar los animales y no alterar su hábitat
             </label>
-
-            <label>
-              <input type="radio" name="pregunta4" value="alimentar" />
+ 
+            <label class="opcion">
+              <input class="opcion-radio" type="radio" name="pregunta4" value="alimentar" />
               Alimentar a los animales
             </label>
-
-            <label>
-              <input type="radio" name="pregunta4" value="residuos" />
+ 
+            <label class="opcion">
+              <input class="opcion-radio" type="radio" name="pregunta4" value="residuos" />
               Dejar residuos en la playa
             </label>
-
-            <label>
-              <input type="radio" name="pregunta4" value="extraer" />
+ 
+            <label class="opcion">
+              <input class="opcion-radio" type="radio" name="pregunta4" value="extraer" />
               Extraer elementos del ecosistema
             </label>
           </fieldset>
-
-          <fieldset>
-            <legend>
+ 
+          <fieldset class="pregunta">
+            <legend class="pregunta-enunciado">
               5. ¿Qué acción estarías dispuesto(a) a realizar para ayudar al
               océano?
             </legend>
-
-            <label>
-              <input type="radio" name="pregunta5" value="reducir-plastico" />
+ 
+            <label class="opcion">
+              <input class="opcion-radio" type="radio" name="pregunta5" value="reducir-plastico" required />
               Reducir el uso de plásticos
             </label>
-
-            <label>
-              <input type="radio" name="pregunta5" value="limpiar" />
+ 
+            <label class="opcion">
+              <input class="opcion-radio" type="radio" name="pregunta5" value="limpiar" />
               Participar en jornadas de limpieza
             </label>
-
-            <label>
-              <input type="radio" name="pregunta5" value="educar" />
+ 
+            <label class="opcion">
+              <input class="opcion-radio" type="radio" name="pregunta5" value="educar" />
               Compartir información sobre el cuidado del océano
             </label>
-
-            <label>
-              <input type="radio" name="pregunta5" value="todas" />
+ 
+            <label class="opcion">
+              <input class="opcion-radio" type="radio" name="pregunta5" value="todas" />
               Realizar todas las anteriores
             </label>
           </fieldset>
+ 
+          <button class="cuestionario-boton" type="submit">Ver mi resultado</button>
         </form>
       </section>
     </main>
-
+ 
     <footer class="footer-ecomar">
         <div class="footer-content">
             <div class="footer-logo">
                 <img class="logo" src="../assets/img/Logo.jpeg" alt="EcoMar">
                 <p>Proyecto educativo para informar, educar y activar acciones a favor del mar Caribe colombiano, alineado con el ODS 14 (Vida submarina) y el ODS 13 (Acción por el clima).</p>
             </div>
-            
+ 
             <nav class="footer-nav">
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
@@ -203,7 +212,7 @@
                     <li><a href="asistente.html">Asistente</a></li>
                 </ul>
             </nav>
-
+ 
             <div class="footer-contacto">
                 <h4>Contáctanos</h4>
                 <p>mariana.toro-s@uniminuto.edu.co</p>
@@ -213,7 +222,7 @@
         <div class="footer-bottom">
             <p>&copy;2026 EcoMar — Proyecto académico, ODS 14 y ODS 13.</p>
             <p>Hecho con HTML, CSS y JavaScript nativos.</p>
-        </div>  
+        </div>
     </footer>
   </body>
 </html>

@@ -1,0 +1,177 @@
+/*Paleta de Colores
+* azul-profundo: #073b4c
+* azul-oceano: #118ab2
+* turquesa: #06d6a0
+* arena: #f4f1de
+* blanco: #ffffff
+*/
+ 
+/* ==========================================================
+   actua.css  -  estilos de pages/actua.html
+   Se carga DESPUÉS de styles.css
+   ========================================================== */
+ 
+/* Borra este bloque si styles.css ya declara las variables */
+:root {
+    --azul-profundo: #073b4c;
+    --azul-oceano: #118ab2;
+    --turquesa: #06d6a0;
+    --arena: #f4f1de;
+    --blanco: #ffffff;
+}
+ 
+/* ---------- Página y títulos ---------- */
+.actua {
+    padding: 24px 6%;               /* mismo margen lateral que el header */
+}
+ 
+.actua-titulo {
+    color: var(--azul-profundo);
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;      /* mayúsculas solo visuales */
+}
+ 
+.actua-subtitulo {
+    margin: 8px 0 32px;
+    color: var(--azul-profundo);
+}
+ 
+.actua-pregunta {
+    margin-bottom: 16px;
+    color: var(--azul-profundo);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+ 
+/* ---------- Sección con la imagen de corales ---------- */
+.cuestionario {
+    /* color de respaldo + imagen cubriendo toda la sección */
+    background: var(--azul-oceano) url("../assets/img/actua_oceano.jpeg") center / cover no-repeat;
+    padding: 32px;
+    border-radius: 24px;
+}
+ 
+.cuestionario-intro {
+    width: min(640px, 100%);        /* máximo 640px, nunca más que el contenedor */
+    margin-bottom: 24px;
+    padding: 20px 24px;
+    border-radius: 12px;
+    background-color: rgba(244, 241, 222, 0.9);     /* arena al 90% */
+    color: var(--azul-profundo);
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+ 
+/* ---------- Formulario: panel azul en grid ---------- */
+.cuestionario-form {
+    display: grid;
+    grid-template-columns: 1fr auto;    /* barra (lo que sobra) | "1/5" (ancho justo) */
+    align-items: center;
+    gap: 24px 12px;                     /* 24px entre filas, 12px entre columnas */
+    padding: 24px;
+    border-radius: 16px;
+    background-color: var(--azul-oceano);
+    color: var(--blanco);
+}
+ 
+.cuestionario-contador {
+    font-weight: 600;
+}
+ 
+/* ---------- Barra de progreso ---------- */
+.cuestionario-progreso {
+    width: 100%;
+    height: 10px;
+    appearance: none;               /* quita el estilo por defecto del navegador */
+    border: none;
+    border-radius: 999px;
+    overflow: hidden;
+}
+ 
+/* Cada navegador usa su propio pseudoelemento: se escribe para todos */
+.cuestionario-progreso::-webkit-progress-bar {      /* pista en Chrome, Edge y Safari */
+    background-color: rgba(255, 255, 255, 0.3);
+}
+ 
+.cuestionario-progreso::-webkit-progress-value {    /* parte llena en Chrome, Edge y Safari */
+    background-color: var(--turquesa);
+}
+ 
+.cuestionario-progreso::-moz-progress-bar {         /* parte llena en Firefox */
+    background-color: var(--turquesa);
+}
+ 
+/* ---------- Preguntas y opciones ---------- */
+.pregunta {
+    grid-column: 1 / -1;            /* ocupa de la primera a la última columna */
+    display: grid;
+    gap: 10px;
+    border: none;
+}
+ 
+.pregunta-enunciado {
+    margin-bottom: 12px;
+    padding: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+ 
+.opcion {
+    display: flex;
+    align-items: center;            /* centra el círculo con el texto */
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--azul-profundo);
+    font-weight: 400;
+    cursor: pointer;                /* manito al pasar el mouse */
+}
+ 
+.opcion-radio {
+    width: 1.1rem;
+    height: 1.1rem;
+    accent-color: var(--azul-oceano);   /* color del círculo marcado */
+}
+ 
+.opcion:hover {
+    background-color: var(--arena);
+}
+ 
+/* :has() = "que tenga adentro": la opción cuyo radio está marcado */
+.opcion:has(input:checked) {
+    background-color: var(--turquesa);
+    font-weight: 600;
+}
+ 
+/* ---------- Botón ---------- */
+.cuestionario-boton {
+    grid-column: 1 / -1;
+    justify-self: start;            /* a la izquierda, del tamaño de su texto */
+    padding: 12px 28px;
+    border: none;
+    border-radius: 999px;
+    background-color: var(--turquesa);
+    color: var(--azul-profundo);
+    font-family: inherit;           /* los botones no heredan la fuente solos */
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+ 
+.cuestionario-boton:hover {
+    background-color: var(--arena);
+}
+ 
+/* ---------- Celular ---------- */
+@media (max-width: 700px) {
+    .cuestionario {
+        padding: 16px;
+    }
+ 
+    .cuestionario-form {
+        padding: 16px;
+    }
+}

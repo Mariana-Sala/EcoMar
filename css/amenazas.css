@@ -1,0 +1,163 @@
+/*Paleta de Colores
+* azul-profundo: #073b4c
+* azul-oceano: #118ab2
+* turquesa: #06d6a0
+* arena: #f4f1de
+* blanco: #ffffff
+*/
+ 
+/* ==========================================================
+   amenazas.css  -  estilos de pages/amenazas.html
+   Se carga DESPUÉS de styles.css
+   ========================================================== */
+ 
+/* Borra este bloque si styles.css ya declara las variables */
+:root {
+    --azul-profundo: #073b4c;
+    --azul-oceano: #118ab2;
+    --turquesa: #06d6a0;
+    --arena: #f4f1de;
+    --blanco: #ffffff;
+}
+ 
+/* ---------- Página ---------- */
+.amenazas {
+    padding: 24px 6%;               /* mismo margen lateral que el header */
+}
+ 
+.amenazas-titulo {
+    text-align: center;
+    color: var(--azul-profundo);
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;      /* mayúsculas solo visuales */
+}
+ 
+.amenazas-subtitulo {
+    margin: 8px 0 24px;
+    text-align: center;
+    color: var(--azul-oceano);
+}
+ 
+/* ---------- Hero: imagen con tarjeta encima ---------- */
+.hero {
+    position: relative;             /* referencia para la tarjeta */
+    border-radius: 24px;
+    overflow: hidden;               /* recorta lo que sobresale de las esquinas redondeadas */
+    margin-bottom: 40px;
+}
+ 
+.hero-imagen {
+    display: block;                 /* quita el espacio blanco que deja una imagen inline */
+    width: 100%;
+    aspect-ratio: 16 / 6;           /* proporción ancho/alto: cámbiala por la de Figma */
+    min-height: 280px;
+    object-fit: cover;              /* llena la caja recortando, sin deformar */
+}
+ 
+.hero-tarjeta {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);    /* con top: 50% la centra verticalmente */
+    width: min(320px, 45%);         /* el menor de los dos valores */
+    padding: 20px;
+    border-radius: 16px;
+    background-color: rgba(7, 59, 76, 0.75);    /* azul-profundo al 75% */
+    color: var(--blanco);
+}
+ 
+.hero-tarjeta-titulo {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+ 
+.hero-tarjeta-texto {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+ 
+/* ---------- Lista de amenazas ---------- */
+.lista-titulo {
+    color: var(--azul-profundo);
+    font-size: 1.1rem;
+}
+ 
+.lista-intro {
+    margin: 8px 0 24px;
+    color: var(--azul-profundo);
+    line-height: 1.5;
+}
+ 
+/* ---------- Tarjeta de cada amenaza ---------- */
+.amenaza {
+    display: grid;
+    grid-template-columns: 1fr 1fr;     /* texto | imagen */
+    margin-bottom: 20px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: var(--blanco);
+}
+ 
+/* nth-of-type cuenta solo los <article>: 1.ª y 3.ª en arena */
+.amenaza:nth-of-type(odd) {
+    background-color: var(--arena);
+}
+ 
+.amenaza-imagen {
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    object-fit: cover;
+}
+ 
+.amenaza-texto {
+    display: flex;
+    flex-direction: column;         /* número, título, texto y etiqueta en vertical */
+    justify-content: center;
+    gap: 10px;
+    padding: 24px;
+}
+ 
+.amenaza-numero {
+    color: var(--azul-oceano);
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+}
+ 
+.amenaza-titulo {
+    color: var(--azul-oceano);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+ 
+.amenaza-descripcion {
+    color: var(--azul-profundo);
+    line-height: 1.5;
+}
+ 
+/* Etiqueta tipo "pastilla" */
+.amenaza-impacto {
+    align-self: flex-start;         /* del tamaño de su texto, no de todo el ancho */
+    padding: 6px 14px;
+    border-radius: 999px;           /* valor muy alto = extremos totalmente redondos */
+    background-color: var(--turquesa);
+    color: var(--azul-profundo);
+    font-size: 0.85rem;
+}
+ 
+/* ---------- Celular ---------- */
+@media (max-width: 700px) {
+    .amenaza {
+        grid-template-columns: 1fr;     /* una sola columna */
+    }
+ 
+    .hero-tarjeta {
+        position: static;               /* vuelve al flujo normal, debajo de la imagen */
+        transform: none;
+        width: 100%;
+        border-radius: 0;
+    }
+}

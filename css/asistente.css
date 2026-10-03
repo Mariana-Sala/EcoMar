@@ -1,0 +1,261 @@
+/*Paleta de Colores
+* azul-profundo: #073b4c
+* azul-oceano: #118ab2
+* turquesa: #06d6a0
+* arena: #f4f1de
+* blanco: #ffffff
+*/
+ 
+/* ==========================================================
+   asistente.css  -  estilos de pages/asistente.html
+   Se carga DESPUÉS de styles.css
+   ========================================================== */
+ 
+/* Borra este bloque si styles.css ya declara las variables */
+:root {
+    --azul-profundo: #073b4c;
+    --azul-oceano: #118ab2;
+    --turquesa: #06d6a0;
+    --arena: #f4f1de;
+    --blanco: #ffffff;
+}
+ 
+/* ---------- Fondo de la página ---------- */
+.asistente {
+    /* Dos fondos separados por coma:
+       1.º (queda ENCIMA): una capa blanca al 45% que desvanece la foto
+       2.º (queda DEBAJO): la foto de la costa */
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)),
+        url("../assets/img/asistente_fondo.jpeg") center / cover no-repeat;
+    padding: 48px 10% 80px;
+}
+ 
+/* ---------- Títulos ---------- */
+.asistente-titulo {
+    color: var(--azul-profundo);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+ 
+.asistente-subtitulo {
+    max-width: 640px;                   /* limita el ancho para que baje de línea */
+    margin: 8px 0 32px;
+    color: var(--azul-oceano);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+ 
+/* ---------- Caja del chat ---------- */
+.chat {
+    max-width: 800px;
+    border: 1px solid var(--azul-profundo);
+    border-radius: 12px;
+    overflow: hidden;                   /* los hijos respetan las esquinas redondeadas */
+    background-color: var(--blanco);
+}
+ 
+.chat-titulo {
+    padding: 14px 20px;
+    background-color: var(--azul-profundo);
+    color: var(--blanco);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+ 
+/* ---------- Zona de mensajes ---------- */
+.chat-mensajes {
+    display: flex;
+    flex-direction: column;             /* un mensaje debajo de otro */
+    gap: 10px;
+    height: 260px;
+    padding: 16px;
+    overflow-y: auto;                   /* scroll vertical solo si hace falta */
+}
+ 
+.mensaje {
+    align-self: flex-start;             /* a la izquierda y del tamaño de su texto */
+    max-width: 60%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background-color: rgba(17, 138, 178, 0.35);     /* azul-oceano al 35% */
+    color: var(--azul-profundo);
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+ 
+/* ---------- Barra para escribir ---------- */
+.chat-formulario {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-top: 1px solid rgba(7, 59, 76, 0.25);
+}
+ 
+.chat-input {
+    flex: 1;                            /* ocupa todo el espacio que deja el botón */
+    padding: 8px 0;
+    border: none;
+    font-family: inherit;               /* los inputs no heredan la fuente solos */
+    font-size: 0.95rem;
+    color: var(--azul-profundo);
+}
+ 
+.chat-boton {
+    padding: 8px 28px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--azul-profundo);
+    color: var(--blanco);
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+ 
+.chat-boton:hover {
+    background-color: var(--azul-oceano);
+}
+ 
+/* ---------- Celular ---------- */
+@media (max-width: 700px) {
+    .asistente {
+        padding: 32px 6% 48px;
+    }
+ 
+    .mensaje {
+        max-width: 85%;
+    }
+}/*Paleta de Colores
+* azul-profundo: #073b4c
+* azul-oceano: #118ab2
+* turquesa: #06d6a0
+* arena: #f4f1de
+* blanco: #ffffff
+*/
+ 
+/* ==========================================================
+   asistente.css  -  estilos de pages/asistente.html
+   Se carga DESPUÉS de styles.css
+   ========================================================== */
+ 
+/* Borra este bloque si styles.css ya declara las variables */
+:root {
+    --azul-profundo: #073b4c;
+    --azul-oceano: #118ab2;
+    --turquesa: #06d6a0;
+    --arena: #f4f1de;
+    --blanco: #ffffff;
+}
+ 
+/* ---------- Fondo de la página ---------- */
+.asistente {
+    /* Dos fondos separados por coma:
+       1.º (queda ENCIMA): una capa blanca al 45% que desvanece la foto
+       2.º (queda DEBAJO): la foto de la costa */
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)),
+        url("../assets/img/asistente_fondo.jpeg") center / cover no-repeat;
+    padding: 48px 10% 80px;
+}
+ 
+/* ---------- Títulos ---------- */
+.asistente-titulo {
+    color: var(--azul-profundo);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+ 
+.asistente-subtitulo {
+    max-width: 640px;                   /* limita el ancho para que baje de línea */
+    margin: 8px 0 32px;
+    color: var(--azul-oceano);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+ 
+/* ---------- Caja del chat ---------- */
+.chat {
+    max-width: 800px;
+    border: 1px solid var(--azul-profundo);
+    border-radius: 12px;
+    overflow: hidden;                   /* los hijos respetan las esquinas redondeadas */
+    background-color: var(--blanco);
+}
+ 
+.chat-titulo {
+    padding: 14px 20px;
+    background-color: var(--azul-profundo);
+    color: var(--blanco);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+ 
+/* ---------- Zona de mensajes ---------- */
+.chat-mensajes {
+    display: flex;
+    flex-direction: column;             /* un mensaje debajo de otro */
+    gap: 10px;
+    height: 260px;
+    padding: 16px;
+    overflow-y: auto;                   /* scroll vertical solo si hace falta */
+}
+ 
+.mensaje {
+    align-self: flex-start;             /* a la izquierda y del tamaño de su texto */
+    max-width: 60%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background-color: rgba(17, 138, 178, 0.35);     /* azul-oceano al 35% */
+    color: var(--azul-profundo);
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+ 
+/* ---------- Barra para escribir ---------- */
+.chat-formulario {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-top: 1px solid rgba(7, 59, 76, 0.25);
+}
+ 
+.chat-input {
+    flex: 1;                            /* ocupa todo el espacio que deja el botón */
+    padding: 8px 0;
+    border: none;
+    font-family: inherit;               /* los inputs no heredan la fuente solos */
+    font-size: 0.95rem;
+    color: var(--azul-profundo);
+}
+ 
+.chat-boton {
+    padding: 8px 28px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--azul-profundo);
+    color: var(--blanco);
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+ 
+.chat-boton:hover {
+    background-color: var(--azul-oceano);
+}
+ 
+/* ---------- Celular ---------- */
+@media (max-width: 700px) {
+    .asistente {
+        padding: 32px 6% 48px;
+    }
+ 
+    .mensaje {
+        max-width: 85%;
+    }
+}
