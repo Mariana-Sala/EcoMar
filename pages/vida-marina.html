@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/vida-marina.css">
     <title>EcoMar-Vida Marina</title>
 </head>
 <body>
@@ -25,16 +26,23 @@
     </header>
 
     <main>
-        <section class="titulo-encabezado">
-            <h1>CONOCE A QUIENES HABITAN EL OCÉANO </h1>
+        <nav class="breadcrumbs">
+            <a href="../index.html">Inicio</a>
+            <span>></span>
+            <span>Vida Marina</span>
+        </nav>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>CONOCE A QUIENES HABITAN EL OCÉANO </h1>
+            </div>
         </section>
 
         <section class="carrusel-animal">
             <div>
                 <h2>Tortuga Marina Verde</h2>
                 <img src="../assets/img/totuga_verde.png" alt="Tortuga Marina Verde">
-                <button id="explorar-tortuga">Explorar Más -></button>
-                <article>
+                <button class="bntn-explorar">Explorar Más &rarr;</button>
+                <article class="info-detalle">
                     <ul>
                         <li>
                             <p>Nombre científico: Chelonia mydas</p>
@@ -51,8 +59,8 @@
             <div>
                 <h2>Ballena Jorobada</h2>
                 <img src="../assets/img/ballena_jorobada.jpg" alt="Ballena Jorobada">
-                <button id="explorar-ballena">Explorar Más -></button>
-                <article>
+                <button class="bntn-explorar">Explorar Más &rarr;</button>
+                <article class="info-detalle">
                     <ul>
                         <li>
                             <p>Nombre científico: Megaptera novaeangliae</p>
@@ -70,8 +78,8 @@
             <div>
                 <h2>Manatí antillano</h2>
                 <img src="../assets/img/manati.jpg" alt="Manatí antillano">
-                <button id="explorar-manati">Explorar Más -></button>
-                <article>
+                <button class="bntn-explorar">Explorar Más &rarr;</button>
+                <article class="info-detalle">
                     <ul>
                         <li>
                             <p>Nombre científico: Trichechus manatus</p>
@@ -88,8 +96,8 @@
             <div>
                 <h2>Delfin Nariz de Botella</h2>
                 <img src="../assets/img/Delfin.jpg" alt="Delfin">
-                <button id="explorar-delfin">Explorar Más -></button>
-                <article>
+                <button class="bntn-explorar">Explorar Más &rarr;</button>
+                <article class="info-detalle">
                     <ul>
                         <li>
                             <p>Nombre científico: Tursiops truncatus</p>
@@ -106,8 +114,8 @@
             <div>
                 <h2>Tiburón Martillo</h2>
                 <img src="../assets/img/tiburon.jpg" alt="Tiburón Martillo">
-                <button id="explorar-tiburon">Explorar Más -></button>
-                <article>
+                <button class="bntn-explorar">Explorar Más &rarr;</button>
+                <article class="info-detalle">
                     <ul>
                         <li>
                             <p>Nombre científico: Sphyrna lewini</p>
@@ -124,8 +132,8 @@
             <div>
                 <h2>Pulpo</h2>
                 <img src="../assets/img/pulpo.png" alt="Pulpo">
-                <button id="explorar-pulpo">Explorar Más -></button>
-                <article>
+                <button class="bntn-explorar">Explorar Más &rarr;</button>
+                <article class="info-detalle">
                      <ul>
                         <li>
                             <p>Nombre científico: Octopus vulgaris</p>
@@ -139,36 +147,47 @@
                     </ul>
                 </article>
             </div>
-        </section>
-        <section>
-            <h3>Cada especie cumple un papel importante en el equilibrio de nuestros océanos.</h3>
-        </section>
-
-        <section>
             <div>
-                <h4>Los tres ecosistemas que sostienen el Caribe</h4>
-                <p>Arrecifes de coral, praderas de pastos marinos y manglares funcionan como una sola unidad: lo que le pasa a uno afecta directamente a los otros dos.</p>
+                <h3>Cada especie cumple un papel importante en el equilibrio de nuestros océanos.</h3>
             </div>
-            <article>
-                <img src="../assets/img/arrecife_coral.jpg" alt="Corales">
-                <h5>Arrecifes de coral</h5>
-                <p>Refugio y zona de cría para cientos de especies de peces e invertebrados. Los del Caribe colombiano (San Andrés y Providencia, Islas del Rosario, Varadero y el Tayrona) están entre los más afectados por el aumento de temperatura del mar.</p>
-                <p>Estado: crítico por blanqueamiento</p>
-            </article>
-            <article>
-                <img src="../assets/img/pasto_marino.jpg" alt="">
-                <h5>Praderas de pastos marinos</h5>
-                <p>Zonas de alimentación de tortugas y manatíes, y sumideros naturales de carbono ("carbono azul"). Muy sensibles a la sedimentación y a los nutrientes que llegan desde tierra firme por los ríos.</p>
-                <p>Estado: en retroceso por sedimentación</p>
-            </article>
-            <article>
-                <img src="../assets/img/manglares.jpg" alt="">
-                <h5>Manglares</h5>
-                <p>Barrera natural contra huracanes y erosión costera, y hábitat de crianza para especies de interés pesquero. En zonas como Cispatá (Córdoba) enfrentan una fuerte presencia de residuos plásticos arrastrados por los ríos.</p>
-                <p>Estado: presión por microplásticos</p>
-            </article>
         </section>
 
+        <section class="contenedor-ecosistemas">
+            <article class="contenedor-ecosistemas-content">
+                <div class="texto">
+                    <header class="header">
+                        <h4>Los tres ecosistemas que sostienen el Caribe</h4>
+                    </header>
+                    <p>Arrecifes de coral, praderas de pastos marinos y manglares funcionan como una sola unidad: lo que le pasa a uno afecta directamente a los otros dos.</p>
+                </div>
+                <div class="tarjetas-ecosistemas">
+                    <article>
+                        <figure>
+                            <img src="../assets/img/arrecife_coral.jpg" alt="Corales">
+                            <figcaption>Arrecifes de coral</figcaption>
+                        </figure>
+                        <p>Refugio y zona de cría para cientos de especies de peces e invertebrados. Los del Caribe colombiano (San Andrés y Providencia, Islas del Rosario, Varadero y el Tayrona) están entre los más afectados por el aumento de temperatura del mar.</p>
+                        <p class="estado">Estado: crítico por blanqueamiento</p>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="../assets/img/pasto_marino.jpg" alt="">
+                            <figcaption>Praderas de pastos marinos</figcaption>
+                        </figure>
+                        <p>Zonas de alimentación de tortugas y manatíes, y sumideros naturales de carbono ("carbono azul"). Muy sensibles a la sedimentación y a los nutrientes que llegan desde tierra firme por los ríos.</p>
+                        <p class="estado">Estado: en retroceso por sedimentación</p>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="../assets/img/manglares.jpg" alt="">
+                            <figcaption>Manglares</figcaption>
+                        </figure>
+                        <p>Barrera natural contra huracanes y erosión costera, y hábitat de crianza para especies de interés pesquero. En zonas como Cispatá (Córdoba) enfrentan una fuerte presencia de residuos plásticos arrastrados por los ríos.</p>
+                        <p class="estado">Estado: presión por microplásticos</p>
+                    </article>
+                </div>
+            </article>
+        </section>
     </main>
     
     <footer class="footer-ecomar">

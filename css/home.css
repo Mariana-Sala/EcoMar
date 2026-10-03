@@ -31,11 +31,7 @@
     position: absolute;
     inset: auto 0 0 0;
     height: 5px;
-    background: linear-gradient(90deg,
-            #003f56ee 0%,
-            #00667de0 30%,
-            #009cb1ea 60%,
-            #009cb1dc 100%);
+    background: linear-gradient(90deg, #003f56ee 0%, #00667de0 30%, #009cb1ea 60%,#009cb1dc 100%);
 }
 
 .hero-content{
@@ -84,12 +80,7 @@
 
 .franja-proposito{
     position: relative;
-    background-image: linear-gradient(90deg,
-            #003f56e0 0%,
-            #00667db3 30%,
-            #009db14d 60%,
-            #009db10d 100%
-        ),
+    background-image: linear-gradient(90deg,#003f56e0 0%,#00667db3 30%, #009db14d 60%, #009db10d 100%),
         url("../assets/img/fondo_peces.jpg");
     background-position: center center;
     background-size: cover;
@@ -99,10 +90,9 @@
 
 }
 
-
 .franja-proposito-content, .franja-objetivos-content{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*Para que no se desborde el contenido*/
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -137,7 +127,7 @@
     display: flex;
     flex-direction: column;
     background: #ffffffe0;
-    border: 4px solid #07598567;
+    border: 4px solid #07598567; /*border style para colocar diferentes tipos de bordes*/
     border-radius: 14px;
     box-shadow: 0 5px 15px #07598571;
     padding: 24px;
@@ -151,7 +141,7 @@
 }
 
 .tarjetas-proposito span {
-    width: fit-content;
+    width: fit-content; /*representa un tamaño de elemento que se adapta a su contenido*/
     margin-bottom: 12px;
     padding: 3px 8px;
     border-radius: 6px;
@@ -189,10 +179,10 @@
     color: #24566d;
     font-size: 16px;
     line-height: 1.5;
+    text-align: justify;
 }
 
 .tarjetas-proposito .boton-linea {
-    
     width: fit-content;
     margin-top: auto;
     padding: 7px 14px;
@@ -265,16 +255,145 @@
     line-height: 1.2;
 }
 
-
-
 .tarjetas-objetivos article:first-child {
     border-top: 4px solid #2aa9bd;
 }
 
-
-/* ODS 13 */
 .tarjetas-objetivos article:last-child {
     border-top: 4px solid #5b9b86;
 }
 
+@media (max-width: 600px) {
 
+    .hero {
+        padding: 75px 20px;
+        background-position: center center;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: none;
+    }
+
+    .hero h1 {
+        max-width: 100%;
+        font-size: 30px;
+        line-height: 1.15;
+        letter-spacing: -0.5px;
+        margin-bottom: 12px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    .hero p {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 1.45;
+        margin-bottom: 18px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .franja-proposito {
+        padding: 65px 20px 70px;
+    }
+
+    .franja-proposito-content {
+        display: block;
+        width: 100%;
+    }
+
+    .texto .header {
+        margin-bottom: 8px;
+    }
+
+    .texto h2 {
+        font-size: 27px;
+        line-height: 1.2;
+    }
+
+    .texto p {
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 25px;
+    }
+
+    .tarjetas-proposito {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .tarjetas-proposito article {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        padding: 22px 20px;
+    }
+
+    .tarjetas-proposito span {
+        font-size: 13px;
+    }
+
+    .tarjetas-proposito h3 {
+        font-size: 18px;
+        line-height: 1.3;
+    }
+
+    .tarjetas-proposito p {
+        padding: 10px 0;
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    .tarjetas-proposito .boton-linea {
+        font-size: 13px;
+        padding: 7px 12px;
+    }
+
+    .franja-objetivos {
+        padding: 65px 20px 70px;
+    }
+
+    .franja-objetivos-content {
+        display: block;
+        width: 100%;
+    }
+
+    .tarjetas-objetivos {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .tarjetas-objetivos article {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        padding: 23px 20px;
+    }
+
+    .tarjetas-objetivos span {
+        font-size: 13px;
+    }
+
+    .tarjetas-objetivos h3 {
+        font-size: 20px;
+        line-height: 1.25;
+    }
+
+    .tarjetas-objetivos p {
+        padding: 10px 0;
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: left;
+    }
+}

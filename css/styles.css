@@ -22,7 +22,7 @@ html{
 .header-principal {
     position: relative;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     gap: 24px;
     padding: 8px 6%;
@@ -49,12 +49,15 @@ html{
 
 .nav-principal ul{
     display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
     align-items: center;
     list-style: none;
-    gap: 30px;
+    gap: 12px 30px;
 }
 
 .nav-principal ul li a{
+    display: block;
     text-decoration: none;
     padding: 6px 0;
     font-weight: bold;
@@ -65,6 +68,32 @@ html{
 .nav-principal ul li a:hover {
     color: #118ab2;
     border-bottom: 2px solid #118ab2;
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5px 0;
+    font-size: 14px;
+    color: #073b4c;
+}
+
+.breadcrumbs a {
+    color: #073b4c;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.breadcrumbs a:hover {
+    color: #118ab2;
+    text-decoration: underline;
+}
+
+.breadcrumbs span {
+    font-weight: 500;
 }
 
 
@@ -159,4 +188,70 @@ html{
 .footer-bottom p{
     font-size: 14px;
     margin: 0;
+}
+
+@media (max-width: 600px) {
+
+    .header-principal {
+        padding: 12px 20px;
+    }
+
+    .logo-container .logo {
+        width: 60px;
+    }
+
+    .nav-principal ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-principal ul li {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .footer-ecomar {
+        padding: 35px 20px 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .footer-logo,
+    .footer-contacto {
+        max-width: 100%;
+    }
+
+    .footer-logo p {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .footer-nav {
+        width: 100%;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .footer-nav ul {
+        margin: 0;
+    }
+
+    .footer-contacto h4 {
+        margin-top: 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        padding: 20px 0 0;
+    }
 }
