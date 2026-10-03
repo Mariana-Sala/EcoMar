@@ -1,0 +1,280 @@
+/*Paleta de Colores
+* azul-profundo: #073b4c
+* azul-oceano: #118ab2
+* turquesa: #06d6a0
+* arena: #f4f1de
+#6DD9EB 
+#c9f2fc
+* blanco: #ffffff
+*/
+
+.hero{
+    position: relative;
+    background-image: linear-gradient(90deg,
+            #003f56e0 0%,
+            #00667db3 30%,
+            #009db14d 60%,
+            #009db10d 100%
+        ),
+        url("../assets/img/fondo_tortuga_marina.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    text-align: left;
+    padding: 150px 80px;
+    overflow: hidden;
+}
+
+.hero::after, .franja-proposito::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 5px;
+    background: linear-gradient(90deg,
+            #003f56ee 0%,
+            #00667de0 30%,
+            #009cb1ea 60%,
+            #009cb1dc 100%);
+}
+
+.hero-content{
+    position: relative;
+    max-width: 600px;
+    z-index: 1; /*Orden que se superpone en el eje z*/
+}
+
+.hero h1{
+    font-size: 48px;
+    font-weight: 800;
+    max-width: 450px;
+    line-height: 1.08;
+    margin-bottom: 14px;
+}
+
+.hero h2{
+    margin-bottom: 10px;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #6DD9EB;
+}
+
+.hero p{
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+    max-width: 300px;
+}
+
+.btn{
+    padding: 10px 24px;
+    border-radius: 24px;
+    background-color: #c9f2fc;
+    color: #073b4c;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn:hover{
+    background-color: #a0e4f5
+}
+
+.franja-proposito{
+    position: relative;
+    background-image: linear-gradient(90deg,
+            #003f56e0 0%,
+            #00667db3 30%,
+            #009db14d 60%,
+            #009db10d 100%
+        ),
+        url("../assets/img/fondo_peces.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    padding: 150px 80px;
+
+}
+
+
+.franja-proposito-content, .franja-objetivos-content{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.texto .header{
+    margin-bottom: 8px;
+}
+
+
+.texto h2{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.texto p{
+    max-width: 700px;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.tarjetas-proposito, .tarjetas-objetivos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.tarjetas-proposito article{
+    display: flex;
+    flex-direction: column;
+    background: #ffffffe0;
+    border: 4px solid #07598567;
+    border-radius: 14px;
+    box-shadow: 0 5px 15px #07598571;
+    padding: 24px;
+    flex: 1 1 300px;   /* Cada tarjeta ocupa mínimo 300px */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjetas-proposito article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px #00000033;
+}
+
+.tarjetas-proposito span {
+    width: fit-content;
+    margin-bottom: 12px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.rotulo-informar{
+    background-color: #d7ebef;
+    color: #075985;
+    border: 1px solid #075985;
+}
+
+.rotulo-educar{
+    background-color: #bcd7cd;
+    color: #0a5539;
+    border: 1px solid #0a5539;
+}
+
+.rotulo-actuar{
+    background-color: #F0A5A6;
+    color: #6e1C1d;
+    border: 1px solid #6e1C1d;
+}
+
+.tarjetas-proposito h3 {
+    color: #075985;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.tarjetas-proposito p, .tarjetas-objetivos p  {
+    padding: 12px 0;
+    color: #24566d;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.tarjetas-proposito .boton-linea {
+    
+    width: fit-content;
+    margin-top: auto;
+    padding: 7px 14px;
+    border: 1px solid #075985;
+    border-radius: 5px;
+    color: #075985;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tarjetas-proposito .boton-linea:hover {
+    background-color: #075985;
+    color: #ffffff;
+}
+
+.franja-objetivos {
+    position: relative;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 63, 86, 0.82) 0%,
+            rgba(0, 102, 125, 0.70) 50%,
+            rgba(0, 63, 86, 0.78) 100%
+        ),
+        url("../assets/img/fondo_mar.jpg");
+
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    padding: 120px 80px;
+    overflow: hidden;
+}
+
+.tarjetas-objetivos article{
+    display: flex;
+    flex-direction: column;
+    background: #ffffffe0;
+    border: 4px solid #ffffff73;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px #002d3c40;
+    padding: 28px;
+    flex: 1 1 450px;   /* Cada tarjeta ocupa mínimo 300px */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjetas-objetivos article:hover {
+  transform: translateY(-6px);
+  box-shadow:  0 16px 35px #002d3c4d;
+}
+
+.tarjetas-objetivos span {
+    width: fit-content;
+    margin-bottom: 12px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: #d7ebef;
+    border: 1px solid #075985;
+    color: #075985;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.tarjetas-objetivos h3 {
+    color: #075985;
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+
+
+.tarjetas-objetivos article:first-child {
+    border-top: 4px solid #2aa9bd;
+}
+
+
+/* ODS 13 */
+.tarjetas-objetivos article:last-child {
+    border-top: 4px solid #5b9b86;
+}
+
+

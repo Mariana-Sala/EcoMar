@@ -1,0 +1,162 @@
+/*Paleta de Colores
+* azul-profundo: #073b4c
+* azul-oceano: #118ab2
+* turquesa: #06d6a0
+* arena: #f4f1de
+* blanco: #ffffff
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: "Raleway", 'Segoe UI', Verdana;
+    font-weight: 300;
+    font-style: normal;
+    background-color: #ffffff;
+}
+
+.header-principal {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 24px;
+    padding: 8px 6%;
+    background-color: #ffffff;
+}
+
+.header-principal::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 3px;
+    background: linear-gradient(90deg, #06d6a0, #118ab2);
+}
+
+.logo-container{
+    flex: 1;
+
+    /* ocupa espacio mínimo a la izquierda */
+    .logo {
+        width: 70px;
+        margin: 0 auto;
+    }
+}
+
+.nav-principal ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-principal ul li a{
+    text-decoration: none;
+    padding: 6px 0;
+    font-weight: bold;
+    color: #073b4c;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-principal ul li a:hover {
+    color: #118ab2;
+    border-bottom: 2px solid #118ab2;
+}
+
+
+/*******FOOTER*******/
+.footer-ecomar{
+    background-color: #073b4c;
+    color: #ffffff;
+    padding: 40px 20px 20px;
+}
+
+.footer-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.footer-logo img{
+    width: 100px;
+    margin: 0 auto 10px;
+    border-radius: 60%;
+}
+
+.footer-logo p{
+    max-width: 300px;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.footer-nav{
+    display: flex;
+    justify-content: center;
+    gap: 30%;    
+    flex: 1;
+    
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 0;
+    margin-top: 30px;
+
+}
+
+.footer-nav ul li{
+    margin-bottom: 10px;
+}
+
+.footer-nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover{
+    color: #118ab2;
+}
+
+.footer-contacto {
+    flex: 1;
+    max-width: 300px;
+}
+
+.footer-contacto h4 {
+    margin: 30px 0 15px;        
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.footer-contacto p {
+    font-size: 14px;
+    margin: 0 0 8px;
+    word-break: break-all; 
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 0;
+    border-top: 2px solid rgba(255,255,255,0.3);
+    margin-top: 1.5%;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    margin: 0;
+}
