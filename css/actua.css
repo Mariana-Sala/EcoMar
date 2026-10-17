@@ -41,7 +41,7 @@
 /* ---------- Sección con la imagen de corales ---------- */
 .cuestionario {
   /* color de respaldo + imagen cubriendo toda la sección */
-  background: var(--azul-oceano) url("../assets/img/actua_oceano.jpeg") center /
+  background: var(--azul-oceano) url("../assets/img/imgActua/actua_oceano.jpeg") center /
     cover no-repeat;
   padding: 32px;
   border-radius: 24px;

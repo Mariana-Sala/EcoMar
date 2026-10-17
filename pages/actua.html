@@ -3,13 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
     <title>Actúa | EcoMar</title>
-    <link rel="icon" href="../assets/img/favicon.png" type="image/png">
+    <link rel="icon" href="../assets/img/imgGlobal/favicon.png" type="image/png">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/actua.css">
   </head>
@@ -17,7 +13,9 @@
   <body>
     <header class="header-principal">
         <div class="logo-container">
-            <img class="logo" src="../assets/img/Logo.jpeg" alt="EcoMar">
+          <a href="../index.html">
+            <img class="logo" src="../assets/img/imgGlobal/Logo.jpeg" alt="EcoMar">
+          </a>
         </div>
         <nav class="nav-principal">
             <ul>
@@ -33,11 +31,11 @@
  
     <main class="actua">
       <nav class="breadcrumbs">
-            <a href="../index.html">Inicio</a>
-            <span>></span>
-            <span>Actua</span>
-        </nav>
- 
+        <a href="../index.html">Inicio</a>
+        <span>></span>
+        <span>Actúa</span>
+      </nav>
+
       <h1 class="actua-titulo">Tu acción también llega al mar</h1>
       <p class="actua-subtitulo">Pequeños cambios pueden generar grandes impactos</p>
  
@@ -191,11 +189,15 @@
         </form>
       </section>
     </main>
+
+    <button class="btn-volver-inicio" id="btnVolverInicio" aria-label="Volver al inicio">
+         &uarr;
+    </button>
  
     <footer class="footer-ecomar">
         <div class="footer-content">
             <div class="footer-logo">
-                <img class="logo" src="../assets/img/Logo.jpeg" alt="EcoMar">
+                <img class="logo" src="../assets/img/imgGlobal/favicon.png"  alt="EcoMar">
                 <p>Proyecto educativo para informar, educar y activar acciones a favor del mar Caribe colombiano, alineado con el ODS 14 (Vida submarina) y el ODS 13 (Acción por el clima).</p>
             </div>
  
@@ -223,5 +225,7 @@
             <p>Hecho con HTML, CSS y JavaScript nativos.</p>
         </div>
     </footer>
+
+    <script type="module" src="../js/main.js"></script>
   </body>
 </html>

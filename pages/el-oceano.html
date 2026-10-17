@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/el-oceano.css">
     <title>EcoMar-El Océano</title>
-    <link rel="icon" href="../assets/img/favicon.png" type="image/png">
+    <link rel="icon" href="../assets/img/imgGlobal/favicon.png"  type="image/png">
 
 </head>
 <body>
     <header class="header-principal">
         <div class="logo-container">
-            <img class="logo" src="../assets/img/Logo.jpeg" alt="EcoMar">
+            <a href="../index.html">
+                <img class="logo" src="../assets/img/imgGlobal/Logo.jpeg" alt="EcoMar">
+            </a>
         </div>
         <nav class="nav-principal">
             <ul>
@@ -43,21 +45,21 @@
             <article >
                 <figure>
                     <figcaption>ECOSISTEMAS MARINOS</figcaption>
-                    <img src="../assets/img/Ola.jpeg" alt="Ola">
+                    <img src="../assets/img/imgElOceano/Ola.jpeg" alt="Ola">
                 </figure>
                 <p>Manglares, pastos marinos y otros ecosistemas que sostienen la vida marina.</p>
             </article>
             <article>
                 <figure>
                     <figcaption>ARRECIFES DE CORAL</figcaption>
-                    <img src="../assets/img/Corales.jpeg" alt="corales">
+                    <img src="../assets/img/imgElOceano/Corales.jpeg" alt="corales">
                 </figure>
                 <p>Ecosistemas fundamentales para la biodiversidad y el equilibrio marino.</p>
             </article>
             <article class="tarjetas_oceano">
                 <figure>
                     <figcaption>CAMBIO CLIMÁTICO</figcaption>
-                    <img src="../assets/img/Clima.jpeg" alt="clima">
+                    <img src="../assets/img/imgElOceano/Clima.jpeg" alt="clima">
                 </figure>
                 <p>Sus efectos pueden alterar los ecosistemas y afectar la vida marina.</p>
             </article>
@@ -73,7 +75,7 @@
                         y la cultura de millones de personas.</p>
                 </div>
                 <div class="imagen-marCaribe">
-                    <img src="../assets/img/caribe.jpeg" alt="Mar Caribe Colombiano">
+                    <img src="../assets/img/imgElOceano/caribe.jpeg" alt="Mar Caribe Colombiano">
                 </div>
                 <div class="tarjetas-marcaribe">
                     <article>
@@ -167,10 +169,14 @@
         </section>
     </main>
 
+    <button class="btn-volver-inicio" id="btnVolverInicio" aria-label="Volver al inicio">
+         &uarr;
+    </button>
+
     <footer class="footer-ecomar">
         <div class="footer-content">
             <div class="footer-logo">
-                <img class="logo" src="../assets/img/Logo.jpeg" alt="EcoMar">
+                <img class="logo" src="../assets/img/imgGlobal/favicon.png"  alt="EcoMar">
                 <p>Proyecto educativo para informar, educar y activar acciones a favor del mar Caribe colombiano, alineado con el ODS 14 (Vida submarina) y el ODS 13 (Acción por el clima).</p>
             </div>
             
@@ -198,5 +204,7 @@
             <p>Hecho con HTML, CSS y JavaScript nativos.</p>
         </div>  
     </footer>
+
+    <script type="module" src="../js/main.js"></script>
 </body>
 </html>
