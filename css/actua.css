@@ -124,6 +124,11 @@
   font-weight: 700;
 }
 
+.pregunta[hidden],
+.cuestionario-boton[hidden] {
+  display: none;
+}
+
 .opcion {
   display: flex;
   align-items: center; /* centra el círculo con el texto */
@@ -164,13 +169,13 @@
 /* ---------- Botón ---------- */
 .cuestionario-boton {
   grid-column: 1 / -1;
-  justify-self: start; /* a la izquierda, del tamaño de su texto */
+  justify-self: start; 
   padding: 12px 28px;
   border: none;
   border-radius: 999px;
   background-color: var(--turquesa);
   color: var(--azul-profundo);
-  font-family: inherit; /* los botones no heredan la fuente solos */
+  font-family: inherit; 
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
@@ -184,14 +189,14 @@
 }
 
 .cuestionario-boton:hover {
-    background-color: var(--arena);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 18px rgba(7, 59, 76, 0.25);
+  background-color: var(--arena);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(7, 59, 76, 0.25);
 }
 
 .cuestionario-boton:focus-visible {
-    outline: 3px solid var(--blanco);
-    outline-offset: 4px;
+  outline: 3px solid var(--blanco);
+  outline-offset: 4px;
 }
 
 /* ---------- Celular ---------- */
@@ -205,13 +210,40 @@
   }
 }
 
-
 @media (prefers-reduced-motion: reduce) {
-    .cuestionario-boton {
-        transition: none;
-    }
+  .cuestionario-boton {
+    transition: none;
+  }
 
-    .cuestionario-boton:hover {
-        transform: none;
-    }
+  .cuestionario-boton:hover {
+    transform: none;
+  }
+}
+
+.resultado-cuestionario {
+  background-color: var(--arena);
+  color: var(--azul-profundo);
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(7, 59, 76, 0.15);
+}
+
+.resultado-cuestionario h2 {
+  margin-bottom: 16px;
+  color: var(--azul-oceano);
+}
+
+.resultado-cuestionario p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.resultado-cuestionario[hidden],
+.cuestionario-form[hidden] {
+    display: none;
+}
+
+.resultado-cuestionario .cuestionario-boton {
+    margin-top: 16px;
 }

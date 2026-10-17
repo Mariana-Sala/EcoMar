@@ -97,15 +97,17 @@
     box-shadow: 0 4px 12px rgba(7, 59, 76, 0.10);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
- 
 
+.amenaza:has(.amenaza-detalle:not([hidden])) {
+    height: auto;
+    min-height: 200px;
+}
+ 
 .amenaza:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 26px rgba(7, 59, 76, 0.20);
 }
 
-
-/* nth-of-type cuenta solo los <article>: 1.ª y 3.ª en arena */
 .amenaza:nth-of-type(odd) {
     background-color: var(--arena);
 }
@@ -116,7 +118,14 @@
     height: 100%;
     min-height: 0;
     object-fit: cover;
-    object-position: center;
+}
+
+.amenaza {
+    grid-template-rows: minmax(0, 1fr);
+}
+
+.amenaza-imagen {
+    max-height: 100%;
 }
  
 .amenaza-texto {
@@ -147,7 +156,7 @@
  
 /* Etiqueta tipo "pastilla" */
 .amenaza-impacto {
-    align-self: flex-start;         /* del tamaño de su texto, no de todo el ancho */
+    align-self: flex-start;         /* del tamaño del texto, no de todo el ancho */
     padding: 6px 14px;
     border-radius: 999px;           /* valor muy alto = extremos totalmente redondos */
     background-color: var(--turquesa);
@@ -184,3 +193,52 @@
         transform: none;
     }
 } 
+
+/* ---------- Información adicional de amenazas ---------- */
+
+.amenaza-detalle {
+    margin-top: 4px;
+    padding: 10px 12px;
+    background-color: var(--blanco);
+    border: 3px solid var(--azul-oceano);
+    border-radius: 8px;
+    color: var(--azul-profundo);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.amenaza-detalle[hidden] {
+    display: none;
+}
+
+.amenaza-detalle p + p {
+    margin-top: 8px;
+}
+
+.amenaza:has(.amenaza-detalle:not([hidden])) .amenaza-texto {
+    gap: 6px;
+    padding: 16px 20px;
+}
+
+
+/* La tarjeta controla su propia altura */
+.amenaza {
+    position: relative;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+}
+
+/* La columna de la imagen actúa como referencia */
+.amenaza-imagen {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    min-width: 0;
+    object-fit: cover;
+    align-self: stretch;
+}
+
+/* Al abrir, el texto define la altura necesaria */
+.amenaza:has(.amenaza-detalle:not([hidden])) {
+    height: auto;
+    min-height: 200px;
+}
