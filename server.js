@@ -105,11 +105,6 @@ app.post("/api/chat", async (req, res) => {
         parts: [{ text: item.text }],
     }));
 
-    /*contenidos.push({
-        role: "user",
-        parts: [{ text: mensaje.trim() }],
-    });*/
-
     const response = await ai.models.generateContent({
       model: "gemini-3.8-flash",
       contents: contenidos,
