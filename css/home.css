@@ -10,110 +10,136 @@
 
 .hero{
     position: relative;
-    background-image: linear-gradient(90deg,
-            #003f56e0 0%,
-            #00667db3 30%,
-            #009db14d 60%,
-            #009db10d 100%
+    background-image:  linear-gradient(
+            90deg,
+            #003042cc 0%,
+            #00576b6b 55%,
+            #00788c14 100%
         ),
-        url("../assets/img/fondo_tortuga_marina.jpg");
-    background-position: center center;
+        url("../assets/img/imgInicio/fondo_tortuga_marina.jpg");
+    background-position: center 45%;
     background-size: cover;
     background-repeat: no-repeat;
     color: #ffffff;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
     text-align: left;
-    padding: 150px 80px;
+    padding: 80px 7% 90px;
     overflow: hidden;
-}
-
-.hero::after, .franja-proposito::after {
-    content: "";
-    position: absolute;
-    inset: auto 0 0 0;
-    height: 5px;
-    background: linear-gradient(90deg, #003f56ee 0%, #00667de0 30%, #009cb1ea 60%,#009cb1dc 100%);
 }
 
 .hero-content{
     position: relative;
     max-width: 600px;
     z-index: 1; /*Orden que se superpone en el eje z*/
+    max-width: 570px;
 }
 
 .hero h1{
     font-size: 48px;
     font-weight: 800;
-    max-width: 450px;
+    max-width: 500px;
     line-height: 1.08;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 12px rgba(0, 40, 60, 0.35);
 }
 
 .hero h2{
-    margin-bottom: 10px;
+    margin-bottom: 14px;
     font-size: 34px;
-    font-weight: 600;
-    line-height: 1.3;
-    color: #6DD9EB;
+    font-weight: 650;
+    line-height: 1.2;
+    color: #a6f0f4;
+    text-shadow: 0 2px 10px rgba(0, 40, 60, 0.3);
 }
 
 .hero p{
-    margin-bottom: 20px;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.3;
-    max-width: 300px;
+    margin-bottom: 28px;
+    font-size: 18px;
+    line-height: 1.55;
+    max-width: 420px;
+    text-shadow: 0 1px 8px rgba(0, 40, 60, 0.3);
 }
 
 .btn{
-    padding: 10px 24px;
-    border-radius: 24px;
+    display: inline-flex;
+    padding: 13px 28px;
+    border: 2px solid transparent;
+    border-radius: 30px;
     background-color: #c9f2fc;
+    box-shadow: 0 4px 14px rgba(0, 40, 60, 0.20);
     color: #073b4c;
-    font-weight: bold;
+    font-weight: 800;
     text-decoration: none;
-    transition: background 0.3s ease;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn:hover{
-    background-color: #a0e4f5
+    background-color:  #ffffff;
+    box-shadow: 0 8px 20px #00283c40;
+    transform: translateY(-2px);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    bottom: -48px;
+    left: -5%;
+    width: 110%;
+    height: 80px;
+    border-radius: 50% 50% 0 0 / 75% 75% 0 0;
+    background-color: #ffffff;
 }
 
 .franja-proposito{
     position: relative;
-    background-image: linear-gradient(90deg,#003f56e0 0%,#00667db3 30%, #009db14d 60%, #009db10d 100%),
-        url("../assets/img/fondo_peces.jpg");
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #ffffff;
-    padding: 150px 80px;
+    color: #075985;
+    padding: 64px 7% 72px;
 
 }
 
 .franja-proposito-content, .franja-objetivos-content{
     display: flex;
     flex-wrap: wrap; /*Para que no se desborde el contenido*/
+    gap: 32px;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-
 .texto .header{
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
-
 
 .texto h2{
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.2;
+    color: #075985;
+    margin: 0;
+}
+
+.texto h2::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 0.9em;
+    margin-right: 14px;
+    border-radius: 4px;
+    background: linear-gradient(180deg, #009db1, #75dae2);
+    vertical-align: -0.1em;
 }
 
 .texto p{
-    max-width: 700px;
-    font-size: 20px;
+    max-width: 650px;
+    font-size: 16px;
     line-height: 1.5;
-    margin-bottom: 30px;
+    margin: 10px 0 0;
+    color: #35647b;
 }
 
 .tarjetas-proposito, .tarjetas-objetivos{
@@ -124,60 +150,82 @@
 }
 
 .tarjetas-proposito article{
+    position: relative;
     display: flex;
     flex-direction: column;
-    background: #ffffffe0;
-    border: 4px solid #07598567; /*border style para colocar diferentes tipos de bordes*/
-    border-radius: 14px;
-    box-shadow: 0 5px 15px #07598571;
-    padding: 24px;
+    align-items: flex-start;
+    padding: 28px;
+    overflow: hidden;
+    background: linear-gradient(
+        135deg,
+        #e0f5ff,
+        #f0faff
+    );
+    border: 1px solid #07598514; /*border style para colocar diferentes tipos de bordes*/
+    border-radius: 18px;
+    box-shadow: 0 2px 10px #0759850f;
     flex: 1 1 300px;   /* Cada tarjeta ocupa mínimo 300px */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.tarjetas-proposito article:nth-child(2) {
+    background: linear-gradient(
+        135deg,
+        #d9f6f5,
+        #effbfa
+    );
+}
+ 
+.tarjetas-proposito article:nth-child(3) {
+    background: linear-gradient(
+        135deg,
+        #eeedff,
+        #f6f4ff
+    );
+}
+
 .tarjetas-proposito article:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px #00000033;
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px #07598524;
 }
 
 .tarjetas-proposito span {
     width: fit-content; /*representa un tamaño de elemento que se adapta a su contenido*/
-    margin-bottom: 12px;
-    padding: 3px 8px;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 500;
+    margin-bottom: 14px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
 }
 
 .rotulo-informar{
-    background-color: #d7ebef;
+    background-color: #c8edff;
     color: #075985;
-    border: 1px solid #075985;
 }
 
 .rotulo-educar{
-    background-color: #bcd7cd;
-    color: #0a5539;
-    border: 1px solid #0a5539;
+    background-color: #c8efea;
+    color: #12695f;
 }
 
 .rotulo-actuar{
-    background-color: #F0A5A6;
-    color: #6e1C1d;
-    border: 1px solid #6e1C1d;
+    background-color: #e0dcff;
+    color: #5548a8;
 }
 
 .tarjetas-proposito h3 {
+    margin: 0 0 8px;
     color: #075985;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 21px;
+    font-weight: 800;
     line-height: 1.3;
 }
 
 .tarjetas-proposito p, .tarjetas-objetivos p  {
-    padding: 12px 0;
-    color: #24566d;
-    font-size: 16px;
+    margin: 0 0 18px;
+    padding: 0;
+    color: #35647b;
+    font-size: 15px;
     line-height: 1.5;
     text-align: justify;
 }
@@ -185,47 +233,58 @@
 .tarjetas-proposito .boton-linea {
     width: fit-content;
     margin-top: auto;
-    padding: 7px 14px;
-    border: 1px solid #075985;
-    border-radius: 5px;
-    color: #075985;
+    padding: 0px;
+    color: #087da0;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 800;
     text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+.tarjetas-proposito .boton-linea::after {
+    content: " →";
+    display: inline-block;
+    transition: transform 0.2s ease;
 }
 
 .tarjetas-proposito .boton-linea:hover {
-    background-color: #075985;
-    color: #ffffff;
+    background: transparent;
+    color: #003f56;
+}
+
+.tarjetas-proposito .boton-linea:hover::after {
+    transform: translateX(4px);
 }
 
 .franja-objetivos {
     position: relative;
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(0, 63, 86, 0.82) 0%,
-            rgba(0, 102, 125, 0.70) 50%,
-            rgba(0, 63, 86, 0.78) 100%
-        ),
-        url("../assets/img/fondo_mar.jpg");
-
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #ffffff;
-    padding: 120px 80px;
+    background: radial-gradient(
+            ellipse at 10% 100%,
+            rgba(117, 218, 226, 0.30),
+            transparent 45%
+        ), linear-gradient(
+            135deg,
+            #e6f7fb 0%,
+            #d9f1f8 55%,
+            #e3f7f2 100%
+        );
+    color: #075985;
+    padding: 64px 7% 80px;
     overflow: hidden;
 }
 
 .tarjetas-objetivos article{
     display: flex;
     flex-direction: column;
-    background: #ffffffe0;
-    border: 4px solid #ffffff73;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px #002d3c40;
+    align-items: flex-start;
+    background: linear-gradient(
+        120deg,
+        #f2fbff,
+        #eefaf6
+    );
+    border: 1px solid #07598514;
+    border-radius: 18px;
+    box-shadow: 0 2px 10px #0759850f;
     padding: 28px;
     flex: 1 1 450px;   /* Cada tarjeta ocupa mínimo 300px */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -233,34 +292,26 @@
 
 .tarjetas-objetivos article:hover {
   transform: translateY(-6px);
-  box-shadow:  0 16px 35px #002d3c4d;
+  box-shadow:  0 14px 30px #07598524;
 }
 
 .tarjetas-objetivos span {
     width: fit-content;
-    margin-bottom: 12px;
-    padding: 5px 10px;
+    margin-bottom: 14px;
+    padding: 6px 12px;
     border-radius: 20px;
-    background-color: #d7ebef;
-    border: 1px solid #075985;
+    background-color: #cceff2;
     color: #075985;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 800;
 }
 
 .tarjetas-objetivos h3 {
+    margin: 0 0 10px;
     color: #075985;
-    font-size: 23px;
+    font-size: 22px;
     font-weight: 800;
     line-height: 1.2;
-}
-
-.tarjetas-objetivos article:first-child {
-    border-top: 4px solid #2aa9bd;
-}
-
-.tarjetas-objetivos article:last-child {
-    border-top: 4px solid #5b9b86;
 }
 
 @media (max-width: 600px) {
@@ -371,14 +422,14 @@
 
     .tarjetas-objetivos {
         flex-direction: column;
-        gap: 18px;
+        gap: 16px;
     }
 
     .tarjetas-objetivos article {
         width: 100%;
         min-width: 0;
         box-sizing: border-box;
-        padding: 23px 20px;
+        padding: 22px;
     }
 
     .tarjetas-objetivos span {
@@ -386,7 +437,7 @@
     }
 
     .tarjetas-objetivos h3 {
-        font-size: 20px;
+        font-size: 19px;
         line-height: 1.25;
     }
 

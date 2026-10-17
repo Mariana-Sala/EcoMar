@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/home.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/home.css" />
     <title>EcoMar</title>
-</head>
-<body>
+    <link rel="icon" href="./assets/img/imgGlobal/favicon.png" />
+  </head>
+  <body>
     <header class="header-principal">
         <div class="logo-container">
-            <img class="logo" src="./assets/img/Logo.jpeg" alt="EcoMar">
+            <img class="logo" src="./assets/img/imgGlobal/Logo.jpeg" alt="EcoMar">
+            <a href="./index.html"></a>
         </div>
         <nav class="nav-principal">
             <ul>
@@ -50,19 +52,19 @@
                         <span class="rotulo-informar">Informar</span>
                         <h3>El Océano</h3>
                         <p>Geografía, importancia económica y social del mar Caribe colombiano para sus comunidades costeras.</p>
-                        <a href="./pages/el-oceano.html" class="boton-linea">Explorar →</a>
+                        <a href="./pages/el-oceano.html" class="boton-linea">Explorar </a>
                     </article>
                     <article>
                         <span class="rotulo-educar">Educar</span>
                         <h3>Vida Marina y Amenazas</h3>
                         <p>Especies, ecosistemas clave y los factores humanos y climáticos que los están degradando.</p>
-                        <a href="./pages/vida-marina.html" class="boton-linea">Explorar →</a>
+                        <a href="./pages/vida-marina.html" class="boton-linea">Explorar </a>
                     </article>
                     <article>
                         <span  class="rotulo-actuar">Actuar</span>
                         <h3>Actúa + Asistente</h3>
                         <p>Un plan de acción ciudadano y un asistente que orienta según tus intereses.</p>
-                        <a href="./pages/actua.html" class="boton-linea">Explorar →</a>
+                        <a href="./pages/actua.html" class="boton-linea">Explorar </a>
                     </article>
                 </div>
             </article>
@@ -96,10 +98,14 @@
         </section>
     </main>
 
+    <button class="btn-volver-inicio" id="btnVolverInicio" aria-label="Volver al inicio">
+         &uarr;
+    </button>
+
     <footer class="footer-ecomar">
         <div class="footer-content">
             <div class="footer-logo">
-                <img class="logo" src="./assets/img/Logo.jpeg" alt="EcoMar">
+                <img class="logo" src="./assets/img/imgGlobal/favicon.png" alt="EcoMar">
                 <p>Proyecto educativo para informar, educar y activar acciones a favor del mar Caribe colombiano, alineado con el ODS 14 (Vida submarina) y el ODS 13 (Acción por el clima).</p>
             </div>
             
@@ -127,5 +133,7 @@
             <p>Hecho con HTML, CSS y JavaScript nativos.</p>
         </div>  
     </footer>
+
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>

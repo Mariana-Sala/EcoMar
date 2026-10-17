@@ -3,14 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+    <title>Actúa | EcoMar</title>
+    <link rel="icon" href="../assets/img/imgGlobal/favicon.png" type="image/png">
     <link rel="stylesheet" href="../css/styles.css">
     <title>EcoMar-Actúa</title>
   </head>
   <body>
     <header class="header-principal">
         <div class="logo-container">
-            <img class="logo" src="../assets/img/Logo.jpeg" alt="EcoMar">
+          <a href="../index.html">
+            <img class="logo" src="../assets/img/imgGlobal/Logo.jpeg" alt="EcoMar">
+          </a>
         </div>
         <nav class="nav-principal">
             <ul>
@@ -23,22 +27,22 @@
             </ul>
         </nav>
     </header>
+ 
+    <main class="actua">
+      <nav class="breadcrumbs">
+        <a href="../index.html">Inicio</a>
+        <span>></span>
+        <span>Actúa</span>
+      </nav>
 
-    <main>
-      <section>
-        <h1>TU ACCIÓN TAMBIÉN LLEGA AL MAR</h1>
-        <p>Pequeños cambios pueden generar grandes impactos.</p>
-
-        <h2>¿Qué tan consiente eres del impacto que generas en el océano?</h2>
-
-        <figure>
-          <img
-            src="../assets/img/actua_oceano.jpeg"
-            alt="Ecosistema marino del caribe colombiano"
-          />
-        </figure>
-
-        <p>
+      <h1 class="actua-titulo">Tu acción también llega al mar</h1>
+      <p class="actua-subtitulo">Pequeños cambios pueden generar grandes impactos</p>
+ 
+      <h2 class="actua-pregunta">¿Qué tan consciente eres del impacto que generas en el océano?</h2>
+ 
+      <!-- La imagen de corales va de fondo en el CSS (actua_oceano.jpeg) -->
+      <section class="cuestionario">
+        <p class="cuestionario-intro">
           Responde este breve cuestionario y descubre cómo puedes aportar a un
           caribe más limpio y sostenible
         </p>
@@ -184,10 +188,14 @@
       </section>
     </main>
 
+    <button class="btn-volver-inicio" id="btnVolverInicio" aria-label="Volver al inicio">
+         &uarr;
+    </button>
+ 
     <footer class="footer-ecomar">
         <div class="footer-content">
             <div class="footer-logo">
-                <img class="logo" src="../assets/img/Logo.jpeg" alt="EcoMar">
+                <img class="logo" src="../assets/img/imgGlobal/favicon.png"  alt="EcoMar">
                 <p>Proyecto educativo para informar, educar y activar acciones a favor del mar Caribe colombiano, alineado con el ODS 14 (Vida submarina) y el ODS 13 (Acción por el clima).</p>
             </div>
             
@@ -215,5 +223,7 @@
             <p>Hecho con HTML, CSS y JavaScript nativos.</p>
         </div>  
     </footer>
+
+    <script type="module" src="../js/main.js"></script>
   </body>
 </html>

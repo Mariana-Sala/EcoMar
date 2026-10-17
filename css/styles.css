@@ -114,10 +114,15 @@ html{
     gap: 40px;
 }
 
-.footer-logo img{
+.footer-logo img {
+    display: block;
+    box-sizing: border-box;
     width: 100px;
+    height: 100px;
     margin: 0 auto 10px;
-    border-radius: 60%;
+    padding: 10px; 
+    border-radius: 50%;
+    background-color: #ffffff;
 }
 
 .footer-logo p{
@@ -133,7 +138,6 @@ html{
     justify-content: center;
     gap: 30%;    
     flex: 1;
-    
 }
 
 .footer-nav ul {
@@ -141,7 +145,6 @@ html{
     padding: 0;
     margin: 30px 0 0;
     margin-top: 30px;
-
 }
 
 .footer-nav ul li{
@@ -181,13 +184,56 @@ html{
     justify-content: space-between;
     align-items: center;
     padding: 2% 0;
-    border-top: 2px solid rgba(255,255,255,0.3);
+    border-top: 2px solid #ffffff4d;
     margin-top: 1.5%;
 }
 
 .footer-bottom p{
     font-size: 14px;
     margin: 0;
+}
+
+.btn-volver-inicio {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: #087da0;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 40, 60, 0.20);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+/* Botón visible al bajar por la página */
+.btn-volver-inicio.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* Efecto al pasar el cursor */
+.btn-volver-inicio:hover {
+    background-color: #075985;
+    transform: translateY(-4px);
 }
 
 @media (max-width: 600px) {
@@ -253,5 +299,13 @@ html{
         gap: 8px;
         text-align: center;
         padding: 20px 0 0;
+    }
+
+    .btn-volver-inicio {
+        right: 16px;
+        bottom: 16px;
+        width: 42px;
+        height: 42px;
+        font-size: 25px;
     }
 }
