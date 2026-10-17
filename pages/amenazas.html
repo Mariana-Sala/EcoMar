@@ -3,45 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Conoce las principales amenazas que afectan la vida marina del Caribe colombiano."
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
     />
+
     <title>Amenazas | EcoMar</title>
-    <link rel="icon" href="../assets/img/Logo.jpeg" type="image/jpeg">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/amenazas.css">
+    <link rel="icon" href="../assets/img/favicon.png" type="image/png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/amenazas.css" />
   </head>
- 
+
   <body>
     <header class="header-principal">
-        <div class="logo-container">
-            <img class="logo" src="../assets/img/Logo.jpeg" alt="EcoMar">
-        </div>
-        <nav class="nav-principal">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="el-oceano.html">El Océano</a></li>
-                <li><a href="vida-marina.html">Vida Marina</a></li>
-                <li><a href="amenazas.html" aria-current="page">Amenazas</a></li>
-                <li><a href="actua.html">Actúa</a></li>
-                <li><a href="asistente.html">Asistente</a></li>
-            </ul>
-        </nav>
-    </header>
- 
-    <main class="amenazas">
-      <nav class="migas" aria-label="Migas de pan">
-        <ol>
+      <div class="logo-container">
+        <img class="logo" src="../assets/img/Logo.jpeg" alt="EcoMar" />
+      </div>
+      <nav class="nav-principal">
+        <ul>
           <li><a href="../index.html">Inicio</a></li>
-          <li aria-current="page">Amenazas</li>
-        </ol>
+          <li><a href="el-oceano.html">El Océano</a></li>
+          <li><a href="vida-marina.html">Vida Marina</a></li>
+          <li><a href="amenazas.html" aria-current="page">Amenazas</a></li>
+          <li><a href="actua.html">Actúa</a></li>
+          <li><a href="asistente.html">Asistente</a></li>
+        </ul>
       </nav>
- 
+    </header>
+
+    <main class="amenazas">
+      <nav class="breadcrumbs">
+        <a href="../index.html">Inicio</a>
+        <span>></span>
+        <span>Amenazas</span>
+      </nav>
+
       <h1 class="amenazas-titulo">El océano nos necesita</h1>
-      <p class="amenazas-subtitulo">Conocer las amenazas es el primer paso para proteger la vida marina.</p>
- 
+      <p class="amenazas-subtitulo">
+        Conocer las amenazas es el primer paso para proteger la vida marina.
+      </p>
+
       <div class="hero">
         <img
           class="hero-imagen"
@@ -56,7 +61,7 @@
           </p>
         </aside>
       </div>
- 
+
       <section>
         <h2 class="lista-titulo">¿Qué está amenazando la vida marina?</h2>
         <p class="lista-intro">
@@ -64,7 +69,7 @@
           arrecifes de coral y pastos marinos. Sin embargo, diferentes
           actividades humanas ponen en riesgo su equilibrio y biodiversidad.
         </p>
- 
+
         <article class="amenaza">
           <div class="amenaza-texto">
             <span class="amenaza-numero">1</span>
@@ -73,7 +78,15 @@
               Los residuos plásticos llegan al mar y afectan a peces, tortugas y
               otras especies.
             </p>
-            <p class="amenaza-impacto"><strong>Impacto:</strong> Daño a la vida marina.</p>
+
+            <button
+              class="amenaza-impacto"
+              type="button"
+              aria-expanded="false"
+              aria-controls="detalle-plasticos"
+            >
+              <strong>Impacto:</strong> Daño a la vida marina
+            </button>
           </div>
           <img
             class="amenaza-imagen"
@@ -82,7 +95,7 @@
             loading="lazy"
           />
         </article>
- 
+
         <article class="amenaza">
           <div class="amenaza-texto">
             <span class="amenaza-numero">2</span>
@@ -91,7 +104,9 @@
               El aumento de la temperatura del océano afecta los corales y
               altera los ecosistemas marinos.
             </p>
-            <p class="amenaza-impacto"><strong>Impacto:</strong> Pérdida de biodiversidad.</p>
+            <p class="amenaza-impacto">
+              <strong>Impacto:</strong> Pérdida de biodiversidad.
+            </p>
           </div>
           <img
             class="amenaza-imagen"
@@ -100,7 +115,7 @@
             loading="lazy"
           />
         </article>
- 
+
         <article class="amenaza">
           <div class="amenaza-texto">
             <span class="amenaza-numero">3</span>
@@ -109,7 +124,9 @@
               La captura excesiva de especies reduce las poblaciones de peces y
               altera el equilibrio del océano.
             </p>
-            <p class="amenaza-impacto"><strong>Impacto:</strong> Agotamiento de especies.</p>
+            <p class="amenaza-impacto">
+              <strong>Impacto:</strong> Agotamiento de especies.
+            </p>
           </div>
           <img
             class="amenaza-imagen"
@@ -118,7 +135,7 @@
             loading="lazy"
           />
         </article>
- 
+
         <article class="amenaza">
           <div class="amenaza-texto">
             <span class="amenaza-numero">4</span>
@@ -127,7 +144,9 @@
               Las aguas residuales y otros contaminantes llegan al mar y
               deterioran sus ecosistemas.
             </p>
-            <p class="amenaza-impacto"><strong>Impacto:</strong> Agua y hábitats afectados.</p>
+            <p class="amenaza-impacto">
+              <strong>Impacto:</strong> Agua y hábitats afectados.
+            </p>
           </div>
           <img
             class="amenaza-imagen"
@@ -138,37 +157,42 @@
         </article>
       </section>
     </main>
- 
+
     <footer class="footer-ecomar">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img class="logo" src="../assets/img/Logo.jpeg" alt="EcoMar">
-                <p>Proyecto educativo para informar, educar y activar acciones a favor del mar Caribe colombiano, alineado con el ODS 14 (Vida submarina) y el ODS 13 (Acción por el clima).</p>
-            </div>
- 
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="el-oceano.html">El Océano</a></li>
-                    <li><a href="vida-marina.html">Vida Marina</a></li>
-                </ul>
-                <ul>
-                    <li><a href="amenazas.html">Amenazas</a></li>
-                    <li><a href="actua.html">Actúa</a></li>
-                    <li><a href="asistente.html">Asistente</a></li>
-                </ul>
-            </nav>
- 
-            <div class="footer-contacto">
-                <h4>Contáctanos</h4>
-                <p>mariana.toro-s@uniminuto.edu.co</p>
-                <p>scharyk.garcia@uniminuto.edu.co</p>
-            </div>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img class="logo" src="../assets/img/Logo.jpeg" alt="EcoMar" />
+          <p>
+            Proyecto educativo para informar, educar y activar acciones a favor
+            del mar Caribe colombiano, alineado con el ODS 14 (Vida submarina) y
+            el ODS 13 (Acción por el clima).
+          </p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy;2026 EcoMar — Proyecto académico, ODS 14 y ODS 13.</p>
-            <p>Hecho con HTML, CSS y JavaScript nativos.</p>
+
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="el-oceano.html">El Océano</a></li>
+            <li><a href="vida-marina.html">Vida Marina</a></li>
+          </ul>
+          <ul>
+            <li><a href="amenazas.html">Amenazas</a></li>
+            <li><a href="actua.html">Actúa</a></li>
+            <li><a href="asistente.html">Asistente</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-contacto">
+          <h4>Contáctanos</h4>
+          <p>mariana.toro-s@uniminuto.edu.co</p>
+          <p>scharyk.garcia@uniminuto.edu.co</p>
         </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy;2026 EcoMar — Proyecto académico, ODS 14 y ODS 13.</p>
+        <p>Hecho con HTML, CSS y JavaScript nativos.</p>
+      </div>
     </footer>
+    <script src="../js/amenazas.js" defer></script>
   </body>
 </html>
